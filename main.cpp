@@ -19,7 +19,7 @@ void display() {
     for (int i = 3; i < 6; i++) {
         cout << shop[i].getsname();
         if (shop[i].getsname().is_sold == 1) {
-            cout << "Sold out    ";
+            cout << "Sold Out    ";
         }
         else {
             cout << shop[i].getsname().getprice() << "    ";
@@ -48,6 +48,8 @@ int main() {
         cout << "Account balance: " << balance;
         cin >> "Enter the character you want to choose: " << #cn << endl;
         cin >> "Enter the skin you want to purchase: " << #sn << endl;
+        if (s.get_is_sold == 1) cout << "Sold out!";
+        if (balance < s.getprice()) cout << "Sorry!";
 
     }
 
