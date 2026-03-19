@@ -9,7 +9,7 @@ int main() {
         cin >> S1 >> S2;
         char ori[100] = {""}; char com[100] = {""}; int i = 0, j = 0;
         if (S1 == "0" && S2 == "0") break;
-        
+
         for (char c1 : S1) {
             ori[i] = c1;
             i++;
@@ -18,33 +18,19 @@ int main() {
             com[j] = c2;
             j++;
         }
-        
-        /*
-        for (int k = 0; k < i; k++) {
-            cout << ori[k] << " " << endl;
-        }
-        for (int p = 0; p < j; p++) {
-            cout << com[p] << " " << endl;
-        } 
-        */
-        
+
         int n = 0, m = 0, cnt = 0;
-        while (n < i || m < j) {
+        while (n < i && m < j) {
             if (com[m] == ori[n]) {
                 cnt++;
                 n++;
             }
             m++;
         }
-        
-        if (cnt == i -1) cout << "true";
-        else cout << "false";
-        
-        /*
-        if (cnt != i-1) cout << "false" << endl;
-        else cout << "true" << endl;
-        */
+
+        if (cnt == i ) cout << "true" << endl;
+        else cout << "false" << endl;
     }
-    
+
     return 0;
 }
