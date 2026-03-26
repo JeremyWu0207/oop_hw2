@@ -8,13 +8,10 @@ class Time{
         int Second;
         
     public:
-        Time();
+        Time(int h = 0, int m = 0, int s = 0);
         bool setTime(int h, int m, int s);
         bool setTime(int totalsec);
-        void showTime();
-    
+        void showTime();    
 };
-
-
 
 #endif
