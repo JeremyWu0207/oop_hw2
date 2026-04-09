@@ -7,7 +7,6 @@ public:
     long long mat[3][3];
 
     matrix(int n = 2);
-    void print();
     
     // 依題目要求定義四個運算 method
     void add(matrix* A, matrix* B);
